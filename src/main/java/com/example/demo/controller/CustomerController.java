@@ -21,13 +21,13 @@ import java.util.List;
 @RequestMapping("customer")
 public class CustomerController {
 
-    private final CustomerService customerService;
+    /*private final CustomerService customerService;
 
     @Autowired
     public CustomerController(CustomerService customerService) {
         log.info("I am in the Customer Controller Constructor!!");
         this.customerService = customerService;
-    }
+    }*/
 
     /*// for test only
     @GetMapping("list")
