@@ -33,6 +33,13 @@ This will show you the Required Page which contains a table with:
 * Phone Number
 
 
+## Steps to create docker image:
+1. Install the docker into your machine from this site [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
+2. Run this maven goal _**mvn spring-boot:build-image**_ to create the image without the Dockerfile (if you work with linux try to run it with the admin)
+3. Run this command to run the docker image _**sudo docker run -p 8080:8080 demo:0.0.1-SNAPSHOT**_
+4. Ensure that the image has been run by this command _**sudo docker ps -a**_, you will find the image name, container id and some other options
+5. Open the browser into this url [https://localhost:8080/customer/categorize/](https://localhost:8080/customer/categorize/)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
