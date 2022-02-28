@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Phones Category</title>
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/customer/categorize}" method="get">
+        <label>Country:</label>
+        <input id="countrySearch" type="text" name="country">
+        <label>State:</label>
+        <input id="stateSearch" type="text" name="state">
+        <button type="submit">Go</button>
+    </form>
+
+    <table class="table table-bordered table-striped">
+        <thead class="alert-dark">
+        <tr>
+            <th>Country Name</th>
+            <th>Phone State</th>
+            <th>Country Code</th>
+            <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="categorize : ${phoneCategorize}">
+            <td th:text="${categorize.getCountry()}"></td>
+            <td th:text="${categorize.getState()}"></td>
+            <td th:text="${categorize.getCountryCode()}"></td>
+            <td th:text="${categorize.getNumber()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
